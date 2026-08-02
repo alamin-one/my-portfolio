@@ -10,16 +10,14 @@ const ProjectsSkeleton = () => (
   </div>
 );
 
-const ProjectPage = async ({
-  searchParams,
-}: {
-  searchParams: Promise<{ page: string }>;
-}) => {
-  const limit = 6;
-
+const ProjectPage = async () => {
+  /* { searchParams, }: { searchParams: Promise<{ page: string }>;}
   const { page } = await searchParams;
   const currentPage = Number(page);
-  const projects = await getAllProject({ currentPage, limit });
+  currentPage,
+  */
+
+  const projects = await getAllProject();
 
   return (
     <>
@@ -49,7 +47,7 @@ const ProjectPage = async ({
 
       <section className=" bg-background ">
         <div className="app-container py-10 pb-5">
-          <Suspense key={currentPage} fallback={<ProjectsSkeleton />}>
+          <Suspense fallback={<ProjectsSkeleton />}>
             {projects.status ? (
               <ProjectsList projects={projects.data!} />
             ) : (
@@ -58,7 +56,7 @@ const ProjectPage = async ({
           </Suspense>
         </div>
       </section>
-      <Pagination page={projects.totalPage ?? 1} />
+      <Pagination page={1} />
     </>
   );
 };

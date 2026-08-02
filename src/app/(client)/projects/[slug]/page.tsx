@@ -14,7 +14,7 @@ interface Props {
 }
 
 const style = {
-  paragraph: 'w-full sm:w-[70%] md:w-[60%] lg:[50%] mt-3',
+  paragraph: 'w-full mt-3',
   spanParent: 'mt-8',
   cardParagraph: 'pb-1 pt-1 text-title border-b border-dashed border-border',
 };

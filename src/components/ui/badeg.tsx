@@ -6,7 +6,6 @@ interface VariantClasses {
   warning: string;
   danger: string;
   techStack: string;
-  card: string;
 }
 interface Props {
   children: ReactNode;
@@ -27,8 +26,7 @@ const Badeg = ({
       'bg-transparent border-warning px-2 py-0.5 text-[10px] text-warning',
     danger: 'bg-transparent border-danger px-2 py-0.5 text-[10px]  text-danger',
     techStack:
-      'bg-surface border border-border px-3 py-1.5 text-[12px] text-text transition-colors',
-    card: 'bg-badge border border-title-secondary/20 px-2 py-1 text-[11px] text-title-secondary   transition-colors',
+      'border border-title/20 bg-card px-3 py-1 text-[13px] text-title transition-colors',
   };
 
   const selectedVariantClass = variantClasses[variant];

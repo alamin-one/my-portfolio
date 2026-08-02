@@ -28,10 +28,11 @@ const Project = async () => {
             <ProjectCard item={item} key={item.slug} />
           ))}
         </div>
-
-        <Link href={'/projects'}>
-          <Button className="mt-10">view all Projects ↗</Button>
-        </Link>
+        <div className="flex items-center justify-start">
+          <Link href={'/projects'}>
+            <Button className="mt-10">view all Projects ↗</Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
