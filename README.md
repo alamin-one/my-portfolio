@@ -27,7 +27,7 @@ touching code.
 
 ## Live Demo
 
-**Live Preview:** (https://example.com/)
+**Live Preview:** (https://alaminhosen.vercel.app/)
 
 ---
 
@@ -178,6 +178,7 @@ http://localhost:3000
 Create a `.env` file in the project root.
 
 ```env
+NEXT_PUBLIC_SITE_URL=
 DATABASE_URL=
 
 NEXTAUTH_SECRET=
