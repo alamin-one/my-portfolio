@@ -15,15 +15,15 @@ const ThemeToggle = () => {
 
   if (!mounted) {
     return (
-      <div className="p-1.5 border border-border rounded-md  ">
-        <Moon size={22} />
+      <div className="p-2 md:p-1 border border-border rounded-md  ">
+        <Sun size={22} />
       </div>
     );
   }
 
   return (
     <button
-      className="p-1.5 border border-border rounded-md cursor-pointer"
+      className="p-2 md:p-1  border border-border rounded-md cursor-pointer"
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
       {resolvedTheme === 'dark' ? <Sun size={22} /> : <Moon size={22} />}

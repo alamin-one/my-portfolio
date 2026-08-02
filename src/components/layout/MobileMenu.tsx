@@ -22,17 +22,17 @@ const MobileMenu = ({ menu }: Props) => {
         onClick={() => setIsOpen(prev => !prev)}
         aria-label="Toggle menu"
       >
-        {isOpen ? <X size={22} /> : <MenuIcon size={22} />}
+        {isOpen ? <X size={27} /> : <MenuIcon size={27} />}
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 w-full flex flex-col gap-1 rounded-b-2xl bg-background  shadow-lg z-50 overflow-hidden">
+        <div className="absolute top-full left-0 w-full flex flex-col gap-1 rounded-b-2xl bg-background z-50 overflow-hidden shadow-sm">
           {menu.map((item, index) => (
             <Link
               key={index}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="text-text text-base border-b border-dashed border-border px-5 py-3"
+              className="text-text text-base border-b border-dashed border-border px-5 py-3 "
             >
               {item.name}
             </Link>

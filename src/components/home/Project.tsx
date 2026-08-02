@@ -23,10 +23,7 @@ const Project = async () => {
             functionality.
           </p>
         </div>
-        <div
-          className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
-          id="contact"
-        >
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {project?.data?.map(item => (
             <ProjectCard item={item} key={item.slug} />
           ))}

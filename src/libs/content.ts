@@ -38,13 +38,13 @@ export const getContactInformation = async () => {
     {
       icon: Email,
       title: 'Email',
-      link: user?.email ?? '',
+      link: `mailto:${user?.email}`,
       label: `${user?.email} ↗`,
     },
     {
       icon: Whatsap,
       title: 'Whatsap',
-      link: user?.whatsapp ?? '',
+      link: `https://wa.me/${user?.whatsapp}`,
       label: `${user?.whatsapp} ↗`,
     },
     {

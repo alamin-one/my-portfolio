@@ -15,8 +15,8 @@ const Contact = async () => {
   const contactInformation = await getContactInformation();
   return (
     <section className=" bg-background ">
-      <div className="app-container">
-        <div className="">
+      <div className="app-container" id="contact">
+        <div>
           <Lable> -- Get In Touch</Lable>
           <h2>Let&apos;s Build Something Together</h2>
           <p className="mt-2 lg:w-[60%]">
