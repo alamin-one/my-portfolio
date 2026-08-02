@@ -24,17 +24,20 @@ const dMSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Md. Alamin | Full-Stack Developer (Next.js, MongoDB, Payments)',
+  title:
+    'Md. Alamin | Full-Stack Developer (Next.js, Node.js, MongoDB, Prisma, Payments)',
 
   description:
-    'Portfolio of Md. Alamin, a Full-Stack developer building fast, secure full-stack products with Next.js, MongoDB, and payment-integrated web apps — from database schema to checkout flow.',
+    'Portfolio of Md. Alamin, a Full-Stack developer building fast, secure full-stack products with Next.js, Node.js, Prisma, MongoDB, and payment-integrated web apps from database schema to checkout flow.',
 
   keywords: [
     'Md. Alamin',
     'Full-Stack Developer',
     'Next.js Developer',
+    'Node.js Developer',
     'MongoDB Developer',
-    'Prisma',
+    'Prisma Developer',
+    'Prisma ORM',
     'React Developer',
     'Stripe Integration',
     'Web Developer Portfolio',
@@ -56,7 +59,7 @@ export const metadata: Metadata = {
     title: 'Md. Alamin | Full-Stack Developer',
 
     description:
-      'Full-stack developer specializing in Next.js, MongoDB, and payment-integrated web apps. Explore real-world projects built end-to-end — from planning to deployment.',
+      'Full-stack developer specializing in Next.js, Node.js, Prisma, MongoDB, and payment-integrated web apps. Explore real-world projects built end-to-end from planning to deployment.',
 
     siteName: "Alamin's Portfolio",
 
@@ -82,11 +85,11 @@ export const metadata: Metadata = {
     title: 'Md. Alamin | Full-Stack Developer',
 
     description:
-      'Full-Stack developer building fast, secure products with Next.js, MongoDB, and Stripe — from database to checkout.',
+      'Full-Stack developer building fast, secure products with Next.js, Node.js, Prisma, MongoDB, and Stripe from database to checkout.',
 
     images: [`${SITE_URL}/admin_overview_.webp`],
 
-    creator: '@example',
+    creator: '@',
   },
 
   robots: {
@@ -101,7 +104,7 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    google: 'your-google-site-verification-code',
+    google: 'MID-BfusUrUH6pHhcVPb3vds8maah1ld4XKFHMPryIM',
   },
 
   category: 'technology',
@@ -115,7 +118,7 @@ export const personJsonLd = {
   image: `${SITE_URL}/admin_overview_.webp`,
   jobTitle: 'Full-Stack Developer',
   description:
-    'Full-Stack developer specializing in Next.js, MongoDB, and payment-integrated web applications.',
+    'Full-Stack developer specializing in Next.js, Node.js, Prisma, MongoDB, and payment-integrated web applications.',
   sameAs: [
     `https://github.com/alamin-one`,
     `https://www.linkedin.com/in/alamin-one/`,
