@@ -150,6 +150,7 @@ export const createProject = async (
     });
 
     revalidatePath('/');
+    revalidatePath('/sitemap.xml');
     revalidatePath('/admin');
     revalidatePath('/admin/all-case');
     revalidatePath('/projects/');
@@ -187,6 +188,7 @@ export const updateProject = async (
     });
 
     revalidatePath('/');
+    revalidatePath('/sitemap.xml');
     revalidatePath('/admin/edit/');
     revalidatePath('/projects/');
     revalidatePath(`/projects/${slug}`);
@@ -219,6 +221,7 @@ export const deleteProject = async (slug: string, public_id: string) => {
     await deleteCloudinaryImage(public_id);
 
     revalidatePath('/');
+    revalidatePath('/sitemap.xml');
     revalidatePath('/admin/');
     revalidatePath('/admin/all-case');
     revalidatePath('/projects/');
