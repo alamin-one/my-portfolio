@@ -1,0 +1,167 @@
+import {
+  Database,
+  ShieldCheck,
+  Zap,
+  Code2,
+  Server,
+  Cable,
+  Monitor,
+  LayoutDashboard,
+  Plus,
+  List,
+  User,
+  Settings,
+  Undo2,
+} from 'lucide-react';
+import { Email, FaceBook, File, GitHub, Linkedin, Map, Whatsap } from './icon';
+import { getAdmin } from '@/actions/profileActions';
+
+export const getContactInformation = async () => {
+  const user = await getAdmin();
+
+  return [
+    {
+      icon: GitHub,
+      title: 'GitHub',
+      link: user?.github ?? '',
+    },
+    {
+      icon: Linkedin,
+      title: 'Linkedin',
+      link: user?.linkedin ?? '',
+    },
+    {
+      icon: FaceBook,
+      title: 'FaceBook',
+      link: user?.facebook ?? '',
+    },
+    {
+      icon: Email,
+      title: 'Email',
+      link: user?.email ?? '',
+      label: `${user?.email} ↗`,
+    },
+    {
+      icon: Whatsap,
+      title: 'Whatsap',
+      link: user?.whatsapp ?? '',
+      label: `${user?.whatsapp} ↗`,
+    },
+    {
+      icon: Map,
+      title: 'Location',
+      link: user?.location ?? '',
+      label: `Remote / Worldwide ↗`,
+    },
+    {
+      icon: File,
+      title: 'Resume',
+      link: user?.resume ?? '',
+      label: `↗`,
+    },
+  ];
+};
+
+export const WhatIDoContent = [
+  {
+    icon: Code2,
+    title: 'Web Development',
+    description:
+      'Building fast, responsive, full-stack web applications from planning to deployment.',
+  },
+  {
+    icon: Database,
+    title: 'Database Management',
+    description:
+      'Designing and structuring data efficiently for scalable, real-world applications.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Authentication & Security',
+    description: 'Implementing secure login systems and protecting user data.',
+  },
+  {
+    icon: Zap,
+    title: 'Performance Optimization',
+    description:
+      'Improving load speed, code quality, and overall user experience.',
+  },
+];
+
+export const AdminMenu1 = [
+  { name: 'Overview', icon: LayoutDashboard, href: '/admin' },
+
+  {
+    name: 'Add case study',
+    icon: Plus,
+    href: '/admin/add',
+  },
+  {
+    name: 'All case studies',
+    icon: List,
+    href: '/admin/all-case',
+  },
+];
+export const AdminMenu2 = [
+  {
+    name: 'Profile',
+    icon: User,
+    href: '/admin/profile',
+  },
+  {
+    name: 'Settings',
+    icon: Settings,
+    href: '/admin/settings',
+  },
+  { name: 'Back', icon: Undo2, href: '/' },
+];
+
+export const Adminskills = [
+  {
+    icon: Server,
+    title: 'Full-Stack & Backend',
+    tech: [
+      { name: 'Next.js', value: 85 },
+      { name: 'Server Actions', value: 80 },
+      { name: 'Middleware', value: 75 },
+      { name: 'NextAuth', value: 75 },
+      { name: 'Node.js', value: 'learning', learning: true },
+      { name: 'Express', value: 'learning', learning: true },
+    ],
+  },
+  {
+    icon: Monitor,
+    title: 'Frontend Development',
+    tech: [
+      { name: 'JavaScript', value: 90 },
+      { name: 'TypeScript', value: 80 },
+      { name: 'React', value: 90 },
+      { name: 'CSS', value: 85 },
+      { name: 'Tailwind CSS', value: 90 },
+    ],
+  },
+  {
+    icon: Database,
+    title: 'Database & Validation',
+    tech: [
+      { name: 'MongoDB', value: 80 },
+      { name: 'Mongoose', value: 80 },
+      { name: 'Prisma', value: 70 },
+      { name: 'Firebase', value: 65 },
+      { name: 'React Hook Form', value: 85 },
+      { name: 'Zod', value: 75 },
+    ],
+  },
+  {
+    icon: Cable,
+    title: 'Tools & Integrations',
+    tech: [
+      { name: 'Stripe', value: 75 },
+      { name: 'Cloudinary', value: 80 },
+      { name: 'Nodemailer', value: 80 },
+      { name: 'Redux', value: 80 },
+      { name: 'RTK Query', value: 75 },
+      { name: 'WordPress', value: 70 },
+    ],
+  },
+];
