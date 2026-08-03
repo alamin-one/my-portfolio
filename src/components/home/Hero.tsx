@@ -11,9 +11,9 @@ const Hero = () => {
         style={{ backgroundImage: "url('/pattern.afd33a3d.svg')" }}
       />
 
-      <div className=" min-h-150 app-container flex flex-col justify-end lg:flex-row gap-15 mt-15 relative z-50">
+      <div className=" min-h-150 app-container flex flex-col justify-end lg:flex-row gap-10 mt-15 relative z-50">
         {/* left */}
-        <div className="lg:w-1/2 flex flex-col justify-center items-start order-2 md:order-1">
+        <div className="lg:w-1/2 flex flex-col justify-center items-start order-2 lg:order-1">
           {/* tooltip */}
           <div className="flex justify-start items-center gap-2">
             <div className="w-2 h-2 bg-success rounded-full relative">
@@ -42,12 +42,13 @@ const Hero = () => {
           </div>
         </div>
         {/* right */}
-        <div className="lg:flex lg:w-1/2 justify-center items-center  order-1 md:order-2">
+        <div className="w-full lg:flex lg:w-1/2 flex flex-col justify-center items-center  order-1 lg:order-2">
           <Image
             src={'/Programming-bro.svg'}
             alt="benar"
-            width={1500}
-            height={1500}
+            width={1000}
+            height={1000}
+            className="max-w-145 lg:max-w-full w-full"
           />
         </div>
       </div>

@@ -16,7 +16,7 @@ const WhatIDo = () => {
             everything to a database.
           </p>
         </div>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="mt-10 grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {WhatIDoContent.map((item, index) => {
             const Icon = item.icon;
 

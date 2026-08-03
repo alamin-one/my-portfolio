@@ -11,16 +11,16 @@ const About = () => {
     >
       <div className="app-container flex flex-col justify-between items-center lg:flex-row gap-10 ">
         {/* left */}
-        <div className=" w-full lg:max-w-87.5 flex justify-end ">
+        <div className=" w-full lg:max-w-87.5">
           <Image
             src={'/about_.webp'}
             width={450}
             height={450}
             alt="about-image"
-            className="border border-border/0 rounded-xl"
+            className="border border-border/0 rounded-xl w-full"
           />
         </div>
-        <div className="w-full ">
+        <div className="w-full  flex-1">
           <Lable>-- About Me</Lable>
 
           <h2>A Developer Who Loves to Share</h2>
