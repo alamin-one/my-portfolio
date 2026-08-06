@@ -135,7 +135,7 @@ export default function CustomCursor() {
               width: `${size}px`,
               height: `${size}px`,
               borderRadius: '50%',
-              backgroundColor: 'var(--title)',
+              backgroundColor: 'var(--title-secondary)',
               pointerEvents: 'none',
               zIndex: 9999 - i,
               opacity: 1 - i / TRAIL_LENGTH,
