@@ -77,11 +77,8 @@ const FormAddCase = ({
 
   /*---------------------------------------------------*
    * Form Submission Effect                            *
-   * Handles form reset and success Aleart.            *
+   * Handles form reset and success Alert.            *
    *---------------------------------------------------*/
-  useEffect(() => {
-    // ...
-  }, [isEdit, reset, setForm, state]);
 
   useEffect(() => {
     if (!state) return;

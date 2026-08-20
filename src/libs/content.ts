@@ -94,12 +94,23 @@ export const AdminMenu1 = [
   {
     name: 'Add case study',
     icon: Plus,
-    href: '/admin/add',
+    href: '/admin/add-case',
   },
   {
     name: 'All case studies',
     icon: List,
     href: '/admin/all-case',
+  },
+  {
+    name: 'Add skill',
+    icon: Plus,
+    href: '/admin/add-skill',
+  },
+
+  {
+    name: 'All skills',
+    icon: List,
+    href: '/admin/all-skills',
   },
 ];
 export const AdminMenu2 = [

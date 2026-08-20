@@ -4,20 +4,15 @@ import Link from 'next/link';
 
 import Button from '../ui/button';
 import { Eye, Pencil, Trash2 } from 'lucide-react';
-import { deleteProject } from '@/actions/projectActions';
 import handleAlert from '@/libs/handleAlert';
+import { SkillFormData } from '@/libs/types';
+import { deleteSkill } from '@/actions/skillsAction';
 
-interface Props {
-  slug: string;
-  title: string;
-  description: string;
-  image: {
-    url: string;
-    public_id: string;
-  };
-}
+const AdminSkillsCard = ({ data }: { data: SkillFormData[] }) => {
+  if (data.length === 0) {
+    return 'No skills found!';
+  }
 
-const AdminProjectCard = ({ data }: { data: Props[] }) => {
   return data.map((item, index) => (
     <div
       key={index}
@@ -30,7 +25,8 @@ const AdminProjectCard = ({ data }: { data: Props[] }) => {
             <Eye size={14} className="text-success" /> view
           </Button>
         </Link>
-        <Link href={`/admin/edit-case/${item.slug}`}>
+
+        <Link href={`/admin/edit-skill/${item.slug}`}>
           <Button variant="secondary" size="sm">
             <Pencil size={10} className="text-title-secondary" /> Edit
           </Button>
@@ -38,7 +34,7 @@ const AdminProjectCard = ({ data }: { data: Props[] }) => {
 
         <Button
           onClick={async () => {
-            const res = await deleteProject(item.slug, item.image.public_id);
+            const res = await deleteSkill(item.slug);
             handleAlert(res.status, res.message);
           }}
           variant="secondary"
@@ -51,4 +47,4 @@ const AdminProjectCard = ({ data }: { data: Props[] }) => {
   ));
 };
 
-export default AdminProjectCard;
+export default AdminSkillsCard;

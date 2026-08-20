@@ -27,6 +27,14 @@ export interface ProjectFormData {
   createdAt?: Date;
   updatedAt?: Date;
 }
+export interface SkillFormData {
+  id?: string;
+  title: string;
+  slug: string;
+  techStack: string[];
+  createdAt?: Date;
+  updatedAt?: Date;
+}
 
 export interface SimpleListEditorProps {
   className?: string;

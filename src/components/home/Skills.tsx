@@ -1,9 +1,13 @@
-import { Adminskills } from '@/libs/content';
+//import { Adminskills } from '@/libs/content';
 
+import { getAllSkills } from '@/actions/skillsAction';
 import Card from '../ui/card';
 import Lable from '../ui/lable';
+import { Cable, CircleHelp, Database, Monitor, Server } from 'lucide-react';
 
-const Skills = () => {
+const Skills = async () => {
+  const Adminskills = await getAllSkills();
+
   return (
     <>
       <section className=" bg-linear-to-l from-background-secondary to-background  ">
@@ -21,8 +25,17 @@ const Skills = () => {
 
           <div className="mt-10 w-full flex flex-col lg:flex-row gap-5">
             <div className="w-full   grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5">
-              {Adminskills.map((item, index) => {
-                const Icon = item.icon;
+              {Adminskills?.data?.map((item, index) => {
+                const Icon =
+                  item.title === 'Full-Stack & Backend'
+                    ? Server
+                    : item.title === 'Frontend Development'
+                      ? Monitor
+                      : item.title === 'Database & Validation'
+                        ? Database
+                        : item.title === 'Tools & Integrations'
+                          ? Cable
+                          : CircleHelp;
 
                 return (
                   <Card
@@ -35,19 +48,13 @@ const Skills = () => {
 
                     <h4 className="mt-4 mb-2"> {item.title}</h4>
                     <div className="">
-                      {item.tech.map((item, index) => {
+                      {item.techStack.map((item, index) => {
                         return (
                           <div
                             key={index}
                             className="flex justify-between items-center px-3 py-1 border-b border-dashed border-border"
                           >
-                            <span>{item.name}</span>
-
-                            {item.learning && (
-                              <span className="text-success text-sm">
-                                {item.value}
-                              </span>
-                            )}
+                            <span>{item}</span>
                           </div>
                         );
                       })}

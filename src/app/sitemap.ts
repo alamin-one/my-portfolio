@@ -35,9 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.6,
     }));
-  } catch (error) {
-    console.error('Sitemap: failed to fetch projects', error);
-  }
+  } catch {}
 
   return [...staticRoutes, ...projectRoutes];
 }

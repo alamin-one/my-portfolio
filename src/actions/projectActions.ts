@@ -178,6 +178,7 @@ export const updateProject = async (
   try {
     const slug = formData.slug;
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { id, createdAt, updatedAt, ...data } = formData;
 
     await prisma.project.update({
@@ -189,7 +190,7 @@ export const updateProject = async (
 
     revalidatePath('/');
     revalidatePath('/sitemap.xml');
-    revalidatePath('/admin/edit/');
+    revalidatePath('/admin/edit-case/');
     revalidatePath('/projects/');
     revalidatePath(`/projects/${slug}`);
 

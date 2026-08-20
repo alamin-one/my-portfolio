@@ -1,7 +1,6 @@
 'use client';
 
-import Link from 'next/link';
-import { useEffect } from 'react';
+import Link from 'next/link'; 
 import { AlertTriangle } from 'lucide-react';
 
 import Button from '@/components/ui/button';
@@ -13,10 +12,6 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  useEffect(() => {
-    console.error(error);
-  }, [error]);
-
   return (
     <section className="min-h-[80vh] flex items-center justify-center">
       <div className="w-full max-w-md border border-border rounded-xl overflow-hidden">

@@ -1,10 +1,13 @@
 import { getAllProject, getRelativeTime } from '@/actions/projectActions';
+import { getAllSkills } from '@/actions/skillsAction';
 import AdminProjectCard from '@/components/admin/AdminProjectCard';
+import AdminSkillsCard from '@/components/admin/AdminskillsCard';
 import SectionBar from '@/components/layout/Section-Bar';
 import Lable from '@/components/ui/lable';
 
 const AdminPage = async () => {
   const project = await getAllProject();
+  const skills = await getAllSkills();
   const latestProject = await getRelativeTime();
   const total_case = project.data?.length;
 
@@ -40,6 +43,17 @@ const AdminPage = async () => {
       </div>
       {/* Recent case studies */}
       <div className="mt-8">
+        <Lable>All Skills</Lable>
+        <div className="mt-3 border-b border-b-border">
+          {skills?.status ? (
+            <AdminSkillsCard data={skills?.data ?? []} />
+          ) : (
+            <p> {skills?.message}</p>
+          )}
+        </div>
+      </div>
+      {/* Recent case studies */}
+      <div className="mt-12">
         <Lable>Recent case studies</Lable>
         <div className="mt-3 border-b border-b-border">
           {project?.status ? (

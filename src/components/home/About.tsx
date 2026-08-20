@@ -13,7 +13,7 @@ const About = () => {
         {/* left */}
         <div className=" w-full lg:max-w-87.5">
           <Image
-            src={'/about_.webp'}
+            src={'/about_letest.webp'}
             width={450}
             height={450}
             alt="about-image"
