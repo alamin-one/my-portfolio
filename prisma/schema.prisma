@@ -69,10 +69,10 @@ type ProjectLinks {
 }
 
 model AdminSkill {
-  id    String   @id @default(auto()) @map("_id") @db.ObjectId
-  slug  String   @unique
-  title String
-  techStack  String[]
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  slug      String   @unique
+  title     String
+  techStack String[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

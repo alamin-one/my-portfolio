@@ -83,7 +83,7 @@ export const createSkill = async (
     revalidatePath('/');
     revalidatePath('/sitemap.xml');
     revalidatePath('/admin');
-    revalidatePath('/admin/all-skill');
+    revalidatePath('/admin/all-skills');
     revalidatePath('/skills/');
     return {
       status: true,
@@ -121,7 +121,7 @@ export const updateSkill = async (
 
     revalidatePath('/');
     revalidatePath('/sitemap.xml');
-    revalidatePath('/admin/edit-skill/');
+    revalidatePath('/admin/edit-skills/');
     revalidatePath('/projects/');
     revalidatePath(`/projects/${slug}`);
 
@@ -153,9 +153,9 @@ export const deleteSkill = async (slug: string) => {
     revalidatePath('/');
     revalidatePath('/sitemap.xml');
     revalidatePath('/admin/');
-    revalidatePath('/admin/all-case');
+    revalidatePath('/admin/all-skills');
     revalidatePath('/projects/');
-    revalidatePath(`/projects/${slug}`);
+    revalidatePath(`/admin/all-skills/${slug}`);
 
     return {
       status: true,
