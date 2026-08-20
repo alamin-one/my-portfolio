@@ -20,7 +20,7 @@ const AdminSkillsCard = ({ data }: { data: SkillFormData[] }) => {
     >
       <p className="line-clamp-1 text-title">{item.title}</p>
       <div className="flex gap-2">
-        <Link href={`/projects/${item.slug}`}>
+        <Link href={`/admin/edit-skill/${item.slug}`}>
           <Button variant="secondary" size="sm">
             <Eye size={14} className="text-success" /> view
           </Button>
