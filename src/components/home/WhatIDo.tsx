@@ -5,7 +5,8 @@ import Lable from '../ui/lable';
 
 const WhatIDo = () => {
   return (
-    <section className=" bg-background ">
+    //bg-background
+    <section className="  ">
       <div className="app-container">
         <div className="">
           <Lable> -- What I Do</Lable>

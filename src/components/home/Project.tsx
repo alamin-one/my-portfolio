@@ -11,7 +11,8 @@ const Project = async () => {
   const project = await getAllProject({ limit });
 
   return (
-    <section className=" bg-linear-to-r from-background-secondary to-background  ">
+    // bg-linear-to-r from-background-secondary to-background
+    <section className="">
       <div className="app-container py-10 ">
         <div className="">
           <Lable> -- projects</Lable>

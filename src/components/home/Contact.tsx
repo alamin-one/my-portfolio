@@ -14,7 +14,8 @@ const style = {
 const Contact = async () => {
   const contactInformation = await getContactInformation();
   return (
-    <section className=" bg-background ">
+    //className=" bg-background "
+    <section>
       <div className="app-container" id="contact">
         <div>
           <Lable> -- Get In Touch</Lable>

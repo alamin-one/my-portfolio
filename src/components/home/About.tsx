@@ -5,10 +5,8 @@ import Lable from '../ui/lable';
 
 const About = () => {
   return (
-    <section
-      className=" bg-linear-to-r from-background-secondary to-background"
-      id="about"
-    >
+    // bg-linear-to-r from-background-secondary to-background
+    <section className="" id="about">
       <div className="app-container flex flex-col justify-between items-center lg:flex-row gap-10 ">
         {/* left */}
         <div className=" w-full lg:max-w-87.5">

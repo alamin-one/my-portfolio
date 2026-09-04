@@ -7,10 +7,10 @@ import { Cable, CircleHelp, Database, Monitor, Server } from 'lucide-react';
 
 const Skills = async () => {
   const Adminskills = await getAllSkills();
-
   return (
+    //bg-linear-to-l from-background-secondary to-background
     <>
-      <section className=" bg-linear-to-l from-background-secondary to-background  ">
+      <section className=" ">
         <div className="app-container">
           <div className="">
             <Lable> -- Skills</Lable>

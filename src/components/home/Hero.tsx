@@ -5,7 +5,8 @@ import Button from '../ui/button';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-background *:" id="hero">
+    //bg-background *:
+    <section className="relative overflow-hidden " id="hero">
       <div
         className="absolute inset-0 z-10 opacity-40 dark:opacity-0 bg-repeat"
         style={{ backgroundImage: "url('/pattern.afd33a3d.svg')" }}
