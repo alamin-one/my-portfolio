@@ -13,6 +13,7 @@ const style = {
 
 const Contact = async () => {
   const contactInformation = await getContactInformation();
+  console.log(contactInformation);
   return (
     //className=" bg-background "
     <section>
@@ -41,13 +42,10 @@ const Contact = async () => {
                       <Icon className={style.icon} />
                       <span> {item.title}</span>
                     </div>
-                    {item.label ? (
-                      <span className="text-text text-sm group-hover:text-title-secondary">
-                        {item.label}
-                      </span>
-                    ) : (
-                      <span>↗ </span>
-                    )}
+
+                    <span className="text-text text-[15px] font-light group-hover:text-title-secondary">
+                      {item.label}
+                    </span>
                   </div>
                 </Link>
               );

@@ -24,40 +24,43 @@ export const getContactInformation = async () => {
       icon: GitHub,
       title: 'GitHub',
       link: user?.github ?? '',
+      label: `view ↗`,
     },
     {
       icon: Linkedin,
       title: 'Linkedin',
       link: user?.linkedin ?? '',
+      label: `view ↗`,
     },
     {
       icon: FaceBook,
       title: 'FaceBook',
       link: user?.facebook ?? '',
+      label: `view ↗`,
     },
     {
       icon: Email,
       title: 'Email',
       link: `mailto:${user?.email}`,
-      label: `${user?.email} ↗`,
+      label: `view ↗`,
     },
     {
       icon: Whatsap,
       title: 'Whatsap',
       link: `https://wa.me/${user?.whatsapp}`,
-      label: `${user?.whatsapp} ↗`,
+      label: `view ↗`,
     },
     {
       icon: Map,
       title: 'Location',
       link: user?.location ?? '',
-      label: `Remote / Worldwide ↗`,
+      label: `Remote / Worldwide`,
     },
     {
       icon: File,
       title: 'Resume',
       link: user?.resume ?? '',
-      label: `↗`,
+      label: `view ↗`,
     },
   ];
 };
