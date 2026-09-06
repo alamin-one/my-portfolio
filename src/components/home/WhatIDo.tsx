@@ -22,7 +22,10 @@ const WhatIDo = () => {
             const Icon = item.icon;
 
             return (
-              <Card key={index}>
+              <Card
+                key={index}
+                className="bg-card/70! backdrop-blur-md! hover:bg-card-hover/70!"
+              >
                 <div className="w-14 h-14 bg-badge text-title-secondary flex justify-center items-center  border border-border  rounded-full">
                   <Icon size={28} />
                 </div>

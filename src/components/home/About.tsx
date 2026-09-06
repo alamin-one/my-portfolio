@@ -9,7 +9,7 @@ const About = () => {
     <section className="" id="about">
       <div className="app-container flex flex-col justify-between items-center lg:flex-row gap-10 ">
         {/* left */}
-        <div className=" w-full lg:max-w-87.5">
+        <div className=" w-full lg:max-w-87.5 border border-title-secondary rounded-[14px]">
           <Image
             src={'/about_letest.webp'}
             width={450}

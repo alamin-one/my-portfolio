@@ -21,7 +21,7 @@ const ProjectPage = async () => {
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-border/60">
+      <section className="relative overflow-hidden border-b border-border/40">
         <div
           className="absolute inset-0 z-10 opacity-70 dark:opacity-5 bg-repeat"
           style={{ backgroundImage: "url('/pattern.afd33a3d.svg')" }}
@@ -45,7 +45,7 @@ const ProjectPage = async () => {
         </div>
       </section>
 
-      <section className=" bg-background ">
+      <section className=" ">
         <div className="app-container py-10 pb-5">
           <Suspense fallback={<ProjectsSkeleton />}>
             {projects.status ? (

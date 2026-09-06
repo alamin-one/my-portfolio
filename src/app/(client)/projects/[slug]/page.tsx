@@ -49,7 +49,7 @@ const SingleCaseStudy = async ({ params }: Props) => {
   }
 
   return (
-    <section className=" bg-linear-to-r from-background-secondary to-background  ">
+    <section className="">
       <div className="app-container pt-25 ">
         <Lable> -- case-study</Lable>
         <div className="space-y-8 mt-3">
@@ -84,7 +84,10 @@ const SingleCaseStudy = async ({ params }: Props) => {
             <ListLable title="Problems I faced" index="04" />
             <div className="mt-6 space-y-3">
               {project?.data?.problems.map((item, index) => (
-                <MiniCard key={index}>
+                <MiniCard
+                  key={index}
+                  className="bg-background/5 backdrop-blur-md "
+                >
                   <Badeg variant="warning">problem</Badeg>
                   <h4 className="mt-2">{item?.title}</h4>
                   <p className="text-[15px]">{item?.description}</p>
@@ -96,7 +99,10 @@ const SingleCaseStudy = async ({ params }: Props) => {
             <ListLable title="How I solved them" index="05" />
             <div className="mt-6 space-y-3">
               {project?.data?.solutions.map((item, index) => (
-                <MiniCard key={index}>
+                <MiniCard
+                  key={index}
+                  className="bg-background/5 backdrop-blur-md "
+                >
                   <Badeg variant="success">solutions</Badeg>
                   <h4 className="mt-2">{item?.title}</h4>
                   <p className="text-[15px]">{item?.description}</p>
@@ -108,7 +114,7 @@ const SingleCaseStudy = async ({ params }: Props) => {
           <div>
             <ListLable title="Frontend vs Backend" index="06" />
             <div className="mt-6 flex flex-col md:flex-row gap-3">
-              <MiniCard className="w-full">
+              <MiniCard className="w-full bg-background/5 backdrop-blur-md ">
                 <p className="text-sm">{`// frontend`}</p>
                 {project?.data?.responsibilities?.frontend.map(
                   (item, index) => (
@@ -118,7 +124,7 @@ const SingleCaseStudy = async ({ params }: Props) => {
                   ),
                 )}
               </MiniCard>
-              <MiniCard className="w-full">
+              <MiniCard className="w-full bg-background/5 backdrop-blur-md ">
                 <p className="text-sm">{`// backend`}</p>
                 {project?.data?.responsibilities.backend.map((item, index) => (
                   <p key={index} className={style.cardParagraph}>

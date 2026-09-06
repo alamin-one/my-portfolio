@@ -4,6 +4,7 @@ import './globals.css';
 import ThemeProviders from '@/provider/ThemeProvider';
 import SessionProviderWrap from '@/provider/SessionProvider';
 import CustomCursor from '@/components/CustomCursor';
+import EmberBackground from '@/components/EmberBackground';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 const spaceGrotesk = Space_Grotesk({
@@ -156,8 +157,13 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <ThemeProviders>
           <SessionProviderWrap>
-            <CustomCursor />
-            {children}
+       <EmberBackground />
+
+      {/* Content */}
+      <div className="relative z-10">
+        <CustomCursor />
+        {children}
+      </div>
           </SessionProviderWrap>
         </ThemeProviders>
       </body>

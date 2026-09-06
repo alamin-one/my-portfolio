@@ -18,7 +18,7 @@ const ProjectCard = ({
   };
 }) => {
   return (
-    <Card className="p-0! overflow-hidden">
+    <Card className="p-0! overflow-hidden border border-title-secondary/10">
       <Image
         src={item?.image?.url || '/default_banner_.webp'}
         alt="card banner"
@@ -32,7 +32,11 @@ const ProjectCard = ({
           {item?.description}
         </p>
         <Link href={`/projects/${item?.slug}`}>
-          <Button variant="secondary" size="sm" className="bg-surface!">
+          <Button
+            variant="secondary"
+            size="sm"
+            className="bg-surface! border border-title-secondary/20"
+          >
             View case study ↗
           </Button>
         </Link>

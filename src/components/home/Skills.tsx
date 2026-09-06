@@ -38,9 +38,10 @@ const Skills = async () => {
                           : CircleHelp;
 
                 return (
+                  //    className="bg-card! hover:bg-card-hover!"
                   <Card
                     key={index}
-                    className="bg-card/40! hover:bg-card-hover!"
+                    className="bg-card/5! backdrop-blur-md! hover:bg-card-hover/50!"
                   >
                     <div className="w-14 h-14 bg-badge text-title-secondary flex justify-center items-center  border border-border  rounded-full">
                       <Icon size={28} />
